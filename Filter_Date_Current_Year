@@ -1,0 +1,2 @@
+--Select date field in filter, use advanced to convery to SQL
+year("Requisition Dates"."Req. Creation Date") = year(@{system.currentTime})
