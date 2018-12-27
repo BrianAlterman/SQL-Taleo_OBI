@@ -1,0 +1,18 @@
+--Nested concatenation of job description fields (12)
+CONCAT((Concat((CONCAT((CONCAT("Requisition Identification"."Description (External) (1st Part) (BL)", 
+"Requisition Identification"."Description (External) (2nd Part) (BL)")), 
+(CONCAT("Requisition Identification"."Description (External) (3rd Part) (BL)", 
+"Requisition Identification"."Description (External) (4th Part) (BL)")))), 
+(CONCAT((CONCAT("Requisition Identification"."Description (External) (5th Part) (BL)", 
+"Requisition Identification"."Description (External) (6th Part) (BL)")), 
+(CONCAT("Requisition Identification"."Description (External) (7th Part) (BL)", 
+"Requisition Identification"."Description (External) (8th Part) (BL)")))))), 
+(CONCAT((CONCAT("Requisition Identification"."Description (External) (9th Part) (BL)", 
+"Requisition Identification"."Description (External) (10th Part) (BL)")), 
+(CONCAT("Requisition Identification"."Description (External) (11th Part) (BL)", 
+"Requisition Identification"."Description (External) (12th Part) (BL)")))))
+
+CONCAT((Concat((CONCAT((CONCAT("Requisition Identification"."Description (External) (1st Part) (BL)", "Requisition Identification"."Description (External) (2nd Part) (BL)")), (CONCAT("Requisition Identification"."Description (External) (3rd Part) (BL)", "Requisition Identification"."Description (External) (4th Part) (BL)")))), (CONCAT((CONCAT("Requisition Identification"."Description (External) (5th Part) (BL)", "Requisition Identification"."Description (External) (6th Part) (BL)")), (CONCAT("Requisition Identification"."Description (External) (7th Part) (BL)", "Requisition Identification"."Description (External) (8th Part) (BL)")))))), (CONCAT((CONCAT("Requisition Identification"."Description (External) (9th Part) (BL)", "Requisition Identification"."Description (External) (10th Part) (BL)")), (CONCAT("Requisition Identification"."Description (External) (11th Part) (BL)", "Requisition Identification"."Description (External) (12th Part) (BL)")))))
+
+--Create URL through concatenation of text value and requisition ID
+CONCAT('https://windstream.taleo.net/careersection/jobdetail.ftl?job=', "Requisition Identification"."Req. Identifier")
