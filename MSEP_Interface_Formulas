@@ -16,3 +16,19 @@ CONCAT((Concat((CONCAT((CONCAT("Requisition Identification"."Description (Extern
 
 --Create URL through concatenation of text value and requisition ID
 CONCAT('https://windstream.taleo.net/careersection/jobdetail.ftl?job=', "Requisition Identification"."Req. Identifier")
+
+--Nested concatenation of job qualification fields (12)
+CONCAT((CONCAT((CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (1st Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (2nd Part) (BL)")), 
+(CONCAT("Requisition Identification"."Qualifications (External) (3rd Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (4th Part) (BL)")))), 
+(CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (5th Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (6th Part) (BL)")), 
+(CONCAT("Requisition Identification"."Qualifications (External) (7th Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (8th Part) (BL)")))))), 
+(CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (9th Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (10th Part) (BL)")), 
+(CONCAT("Requisition Identification"."Qualifications (External) (11th Part) (BL)", 
+"Requisition Identification"."Qualifications (External) (12th Part) (BL)")))))
+
+CONCAT((CONCAT((CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (1st Part) (BL)", "Requisition Identification"."Qualifications (External) (2nd Part) (BL)")), (CONCAT("Requisition Identification"."Qualifications (External) (3rd Part) (BL)", "Requisition Identification"."Qualifications (External) (4th Part) (BL)")))), (CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (5th Part) (BL)", "Requisition Identification"."Qualifications (External) (6th Part) (BL)")), (CONCAT("Requisition Identification"."Qualifications (External) (7th Part) (BL)", "Requisition Identification"."Qualifications (External) (8th Part) (BL)")))))), (CONCAT((CONCAT("Requisition Identification"."Qualifications (External) (9th Part) (BL)", "Requisition Identification"."Qualifications (External) (10th Part) (BL)")), (CONCAT("Requisition Identification"."Qualifications (External) (11th Part) (BL)", "Requisition Identification"."Qualifications (External) (12th Part) (BL)")))))
